@@ -4,8 +4,6 @@ import chart from "../../assets/grafico.png";
 
 import Menu from "../shared/menu";
 
-import "./styles.css";
-
 export default function Home() {
   return (
     <div>

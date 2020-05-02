@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
     overflow-y: scroll;
 }
 
@@ -80,3 +81,102 @@ body {
 .footer-background {
     background-color: #f71a63;
 }
+=======
+  overflow-y: scroll;
+}
+
+.pesquisa {
+  border: 2px solid #f2f2f2;
+  border-radius: 4px;
+  width: 500px;
+  height: 35px;
+  position: absolute;
+  left: 38%;
+  top: 12%;
+  display: flex;
+  background-color: #efefefb0;
+  box-shadow: 0px 0px 4px rgba(1, 0, 0, 0.25);
+}
+
+.pesquisa input {
+  border: none;
+  height: 29px;
+  outline: 0;
+  width: 450px;
+  margin-left: 10px;
+  font-size: 18px;
+  background-color: #efefefb0;
+}
+
+.pesquisa span img {
+  margin-left: 10px;
+  margin-top: 6px;
+  background-color: #efefefb0;
+  box-shadow: 0px 1px 20 5px rgba(1, 0, 0, 0.25);
+}
+
+.topBar {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 25px 0px 0px 0px;
+}
+
+.navBar {
+  border: 2px solid #f2f2f2;
+  width: 1200px;
+  height: 300px;
+  background-color: #efefefb0;
+  border-radius: 4px;
+  display: inline-flex;
+  padding: 0px 0px 0px 0px;
+}
+
+.navBar span {
+  display: flex;
+  position: absolute;
+  margin-top: 12px;
+}
+
+.navBar span img {
+  margin-left: 5px;
+}
+
+.navBar span label {
+  margin-left: 8px;
+}
+
+.block {
+  width: 170px;
+  height: 220px;
+  background-color: #fff;
+  margin-left: 25px;
+  margin-top: 55px;
+  border-radius: 2px;
+  box-shadow: 0px 1px 20 5px rgba(1, 0, 0, 0.25);
+}
+
+.block img {
+  margin-left: 15px;
+  margin-right: 85px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.block label {
+  margin-left: 12px;
+}
+
+.block div {
+  /* border: 1px solid black; */
+  background-color: #dbdbdb8e;
+  height: 45px;
+}
+
+.footer-background {
+  background-color: #f71a63;
+}
+>>>>>>> feature/tela-marketplace

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-import "./styles.css";
-
 export default function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");

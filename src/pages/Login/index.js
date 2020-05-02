@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import './styles.css';
+import '../../assets/sass/main.scss';
 
 export default function Login() {
 

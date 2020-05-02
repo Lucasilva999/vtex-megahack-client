@@ -29,7 +29,7 @@ export default () => {
   }
 
   return (
-    <nav>
+    <nav className="menu_lateral">
       <div className="logo menu-bar" style={{ marginLeft: "70px" }}>
         <img src={logoVtex} alt="" />
         <div className="logout" onClick={() => logout()}>

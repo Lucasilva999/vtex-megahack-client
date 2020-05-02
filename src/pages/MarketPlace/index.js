@@ -69,28 +69,28 @@ export default function MarketPlace() {
             </div>
           </div>
         </div>
-        <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Vtex</h5>
-                <p class="grey-text text-lighten-4">Mercado de varejo Digital.</p>
+        <footer className="page-footer footer-background">
+          <div className="container">
+            <div className="row">
+              <div className="col l6 s12">
+                <h5 className="white-text">Vtex</h5>
+                <p className="grey-text text-lighten-4">Mercado de varejo Digital.</p>
               </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Contato</h5>
+              <div className="col l4 offset-l2 s12">
+                <h5 className="white-text">Contato</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Tel: (11) 4001-4569</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Email: teste@teste.com.br</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!"></a></li>
-                  <li><a class="grey-text text-lighten-3">Rua Lorisvaldo, 450 - São Jorge - SP</a></li>
+                  <li><a className="grey-text text-lighten-3" href="#!">Tel: (11) 4001-4569</a></li>
+                  <li><a className="grey-text text-lighten-3" href="#!">Email: teste@teste.com.br</a></li>
+                  <li><a className="grey-text text-lighten-3" href="#!"></a></li>
+                  <li><a className="grey-text text-lighten-3">Rua Lorisvaldo, 450 - São Jorge - SP</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="footer-copyright">
-            <div class="container">
+          <div className="footer-copyright">
+            <div className="container">
             © 2020 Copyright By Developer Grupo 71
-            <a class="grey-text text-lighten-4 right" href="#!">Facebook</a>
+            <a className="grey-text text-lighten-4 right" href="#!">Facebook</a>
             </div>
           </div>
         </footer>

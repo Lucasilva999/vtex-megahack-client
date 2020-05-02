@@ -11,11 +11,11 @@ export default function Home() {
         <Menu />
       </div>
 
-      <div>
+
         <div className="charts">
           <img src={chart} alt="" />
         </div>
-      </div>
+      
     </div>
   );
 }

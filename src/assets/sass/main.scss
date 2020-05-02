@@ -103,7 +103,7 @@ a:focus {
   body {
     background-color: #fff;
     /* background-color: #eb6390; */
-    font-family: Roboto, Arial, sans-serif;
+	font-family: Roboto, Arial, sans-serif;
   }
   
   section {
@@ -159,7 +159,6 @@ a:focus {
   /* APARICAO DO FORM */
   
   form {
-    overflow: hidden;
     animation: fade 0.2s;
       .input-block:nth-child(1) {
         animation: move 500ms;
@@ -235,10 +234,6 @@ a:focus {
 
   /* squares */
 
-  body {
-    overflow: hidden;
-  }
-  
   .squares{
     li {
       width: 40px;
@@ -266,6 +261,11 @@ a:focus {
   }
 
   // SHARED - MENU
+  .menu_lateral{
+		height: 100%;
+		color: black;
+		background-color: #fff;
+  }
   .navigation{
 	div {
 		margin-top: 40px;
@@ -293,3 +293,6 @@ a:focus {
 	align-items: center;
 	margin-right: 60px;
   }  
+  .charts{
+	text-align: center;
+  }

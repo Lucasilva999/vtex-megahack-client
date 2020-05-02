@@ -24,8 +24,6 @@ export default function Login() {
   return (
     <div>
       <section className="form-section">
-        <h1></h1>
-
         <div className="form-wrapper">
           <form>
             <div className="input-block">

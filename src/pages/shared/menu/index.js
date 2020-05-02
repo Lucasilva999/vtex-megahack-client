@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import logoVtex from "../../../assets/vtex-logo.png";
@@ -9,6 +9,14 @@ export default () => {
   const [logistic, setLogistic] = useState("");
 
   const history = useHistory();
+
+  useEffect(() => {
+    const email = localStorage.getItem("email");
+
+    if (!email) {
+      history.push("/login");
+    }
+  }, []);
 
   function alterActive(activeItem) {
     setHome("");

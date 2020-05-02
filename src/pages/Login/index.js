@@ -1,30 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import './styles.css';
 
 export default function Login() {
 
+    const mail = localStorage.getItem('email');
+
+    // if (!mail) history.push('/login');
+
+    const history  = useHistory();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+  function handleLogin() {
+
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+    history.push('/');
+
+  }
+
   return (
     <div>
-        <section class="form-section">
+        <section className="form-section">
             <h1></h1>
 
-            <div class="form-wrapper">
+            <div className="form-wrapper">
                 <form>
-                <div class="input-block">
-                    <label for="login-email">Email</label>
-                    <input type="email" id="login-email" />
+                <div className="input-block">
+                    <label>Email</label>
+                    <input type="email" id="login-email" value={email} onChange={e => setEmail(e.target.value)} />
                 </div>
-                <div class="input-block">
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" />
+                <div className="input-block">
+                    <label>Senha</label>
+                    <input type="password" id="login-password" value={password} onChange={e => setPassword(e.target.value)} />
                 </div>
-                <button type="submit" class="btn-login">Login</button>
+                <button type="submit" onClick={handleLogin} className="btn-login">Login</button>
                 </form>
             </div>
             </section>
 
-        <ul class="squares"></ul>
+        <ul className="squares"></ul>
 
     </div>
   );

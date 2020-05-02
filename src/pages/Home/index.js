@@ -1,11 +1,23 @@
-import React from 'react';
+import React from "react";
 
-// import { Container } from './styles';
+import chart from "../../assets/grafico.png";
+
+import Menu from "../shared/menu";
+
+import "./styles.css";
 
 export default function Home() {
   return (
     <div>
-        oi
+      <div className="menu">
+        <Menu />
+      </div>
+
+      <div>
+        <div className="charts">
+          <img src={chart} alt="" />
+        </div>
+      </div>
     </div>
   );
 }

@@ -3,8 +3,6 @@ import { useHistory } from "react-router-dom";
 
 import logoVtex from "../../../assets/vtex-logo.png";
 
-import "./style.css";
-
 export default () => {
   const [home, setHome] = useState("active");
   const [product, setProduct] = useState("");

@@ -30,10 +30,10 @@ export default function MarketPlace() {
       </div>
       <div className="pesquisa">
         <span>
-          <img src={Lupa} width={20} alt="" />
+          <img src={Lupa} width={15} alt="" />
         </span>
         <span>
-          <input placeholder="Oque procura?" />
+          <input className="label-search" placeholder="O que procura?" />
         </span>
       </div>
       <div className="topBar">
@@ -134,7 +134,7 @@ export default function MarketPlace() {
           <div className="block">
             <img src={Relogio} width={140} alt="" />
             <div>
-              <span>
+              <span>  
                 <label>R$ 989,99</label>
                 <button onClick={handleCart}>Comprar</button>
               </span>
@@ -166,7 +166,7 @@ export default function MarketPlace() {
             <div className="col l6 s12">
               <h5 className="white-text">Vtex</h5>
               <p className="grey-text text-lighten-4">
-                Mercado de varejo Digital.
+                Mercado de Varejo Digital.
               </p>
             </div>
             <div className="col l4 offset-l2 s12">

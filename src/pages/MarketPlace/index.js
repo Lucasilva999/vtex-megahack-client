@@ -1,110 +1,148 @@
-import React from "react";
+import React, { useState } from "react";
 
-
-import LogoVtex from "../../assets/VTEX_Logo.png";
-import Lupa from "../../assets/lupa.svg";
 import Location from "../../assets/location.svg";
 import Relogio from "../../assets/relogio.png";
+import Logistica from "../../assets/logistic.svg";
+
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function MarketPlace() {
+  const [cart, setCart] = useState(0);
+
+  function handleCart() {
+    const carrinho = parseInt(cart) + 1;
+    setCart(carrinho);
+  }
+
   return (
     <div>
-      <div>
-        <img src={LogoVtex} width={200} />
-      </div>
-      <div className="pesquisa">
-        <span>
-          <img src={Lupa} width={20} />
-        </span>
-        <span>
-          <input placeholder="Oque procura?" />
-        </span>
+      <Header cart={cart} />
+      <div className="topBar">
+        <div className="navBar">
+          <span>
+            <img src={Location} width={18} alt="" />
+            <label>Sua Localização</label>
+          </span>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="topBar">
         <div className="navBar">
           <span>
-            <img src={Location} width={18} />
-            <label>Sua Localização</label>
+            <img src={Logistica} width={18} alt="" />
+            <label>Pronto Entrega!</label>
           </span>
           <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
-          </div>
-          <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
-          </div>
-          <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
-          </div>
-          <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
-          </div>
-          <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
-          </div>
-          <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
-          </div>
-        </div>
-      </div>
-      <div className="topBar">
-        <div className="navBar">
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
-        </div>
-      </div>
-      <footer className="page-footer footer-background">
-        <div className="container">
-          <div className="row">
-            <div className="col l6 s12">
-              <h5 className="white-text">Vtex</h5>
-              <p className="grey-text text-lighten-4">
-                Mercado de varejo Digital.
-              </p>
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
             </div>
-            <div className="col l4 offset-l2 s12">
-              <h5 className="white-text">Contato</h5>
-              <ul>
-                <li>
-                  <a className="grey-text text-lighten-3" href="#!">
-                    Tel: (11) 4001-4569
-                  </a>
-                </li>
-                <li>
-                  <a className="grey-text text-lighten-3" href="#!">
-                    Email: teste@teste.com.br
-                  </a>
-                </li>
-                <li>
-                  <a className="grey-text text-lighten-3" href="#!"></a>
-                </li>
-                <li>
-                  <a className="grey-text text-lighten-3">
-                    Rua Lorisvaldo, 450 - São Jorge - SP
-                  </a>
-                </li>
-              </ul>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
             </div>
           </div>
         </div>
-        <div className="footer-copyright">
-          <div className="container">
-            © 2020 Copyright By Developer Grupo 71
-            <a className="grey-text text-lighten-4 right" href="#!">
-              Facebook
-            </a>
-          </div>
-        </div>
-      </footer>
+      </div>
+      <Footer />
     </div>
   );
 }

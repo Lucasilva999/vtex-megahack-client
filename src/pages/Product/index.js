@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
+
+import api from "../../services/api";
 
 import Lupa from "../../assets/lupa.svg";
 import Relogio from "../../assets/relogio.png";
 
 export default (props) => {
+  const [products, setProducts] = useState([]);
+
+  const [name] = localStorage.getItem("email").split("@");
+
+  useEffect(() => {
+    async function onLoad() {
+      const res = await api.get("/api/products");
+      setProducts(res.data.data);
+    }
+    onLoad();
+    console.log(products);
+  }, []);
+
   return (
     <div className="home">
       <h1 className="center">Produtos Recém Cadastrados</h1>
@@ -22,100 +37,27 @@ export default (props) => {
       </div>
 
       <div className="compra_feita produtos_cadastrados">
-        <div className="compra">
-          <div className="box">
-            <img src={Relogio} alt="" />
-            <p>Preço: Negociável</p>
-            <p>
-              Produto cadastrado por <a href="">Pedro</a>
-            </p>
-            <span>2 minutos atrás - Zona Sul</span>
+        {products.map((product, index) => (
+          <div className="compra" key={index}>
+            <div className="box">
+              <img
+                src={`http://localhost:5000${product.productImage}`}
+                alt="imagem do produto"
+              />
+              <p>
+                Preço:
+                {Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(product.value)}
+              </p>
+              <p>
+                Produto cadastrado por <a href="">{name}</a>
+              </p>
+              <p></p>
+            </div>
           </div>
-        </div>
-        <div className="compra">
-          <div className="box">
-            <img src={Relogio} alt="" />
-            <p>Preço: R$ 199,90</p>
-            <p>
-              Produto cadastrado por <a href="">João</a>
-            </p>
-            <span>19 minutos atrás - Zona Norte</span>
-          </div>
-        </div>
-        <div className="compra">
-          <div className="box">
-            <img src={Relogio} alt="" />
-            <p>Preço: R$ 100,00</p>
-            <p>
-              Produto cadastrado por <a href="">Carlos</a>
-            </p>
-            <span>33 minutos atrás - Zona Oeste</span>
-          </div>
-        </div>
-      </div>
-      <div className="compra_feita produtos_cadastrados_2">
-        <div className="compra">
-          <div className="box">
-            <img src={Relogio} alt="" />
-            <p>Preço: R$ 150,00</p>
-            <p>
-              Produto cadastrado por <a href="">Marcelo</a>
-            </p>
-            <span>47 minutos atrás - Zona Sul</span>
-          </div>
-        </div>
-        <div className="compra">
-          <div className="box">
-            <img src={Relogio} alt="" />
-            <p>Preço: Negociável</p>
-            <p>
-              Produto cadastrado por <a href="">Júlia</a>
-            </p>
-            <span>Mais de uma hora - Zona Leste</span>
-          </div>
-        </div>
-        <div className="compra">
-          <div className="box">
-            <img src={Relogio} alt="" />
-            <p>Preço: Negociável</p>
-            <p>
-              Produto cadastrado por <a href="">Ana</a>
-            </p>
-            <span>3 horas atrás - Zona Sul</span>
-          </div>
-        </div>
-      </div>
-      <div className="compra_feita produtos_cadastrados_2">
-        <div className="compra">
-          <div className="box">
-            <img src={Relogio} alt="" />
-            <p>Preço: R$ 150,00</p>
-            <p>
-              Produto cadastrado por <a href="">Marcelo</a>
-            </p>
-            <span>47 minutos atrás - Zona Sul</span>
-          </div>
-        </div>
-        <div className="compra">
-          <div className="box">
-            <img src={Relogio} alt="" />
-            <p>Preço: Negociável</p>
-            <p>
-              Produto cadastrado por <a href="">Júlia</a>
-            </p>
-            <span>Mais de uma hora - Zona Leste</span>
-          </div>
-        </div>
-        <div className="compra">
-          <div className="box">
-            <img src={Relogio} alt="" />
-            <p>Preço: Negociável</p>
-            <p>
-              Produto cadastrado por <a href="">Ana</a>
-            </p>
-            <span>3 horas atrás - Zona Sul</span>
-          </div>
-        </div>
+        ))}
       </div>
       <div className="compra_feita produtos_cadastrados_3">
         <a className="ver_mais">Ver Mais</a>

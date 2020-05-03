@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styles.css";
+
 import LogoVtex from "../../assets/VTEX_Logo.png";
 import Lupa from "../../assets/lupa.svg";
 import Location from "../../assets/location.svg";

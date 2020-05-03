@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-import "./styles.css";
-
 export default function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  useEffect(() => {
+    const mail = localStorage.getItem("email");
+
+    if (mail) {
+      history.push("/");
+    }
+  }, []);
 
   useEffect(() => {
     const mail = localStorage.getItem("email");

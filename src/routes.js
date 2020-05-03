@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import Marketplace from "./pages/MarketPlace";
 
 export default function Routes() {
-  
   return (
     <BrowserRouter>
       <Switch>

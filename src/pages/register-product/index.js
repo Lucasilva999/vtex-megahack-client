@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { Link, useHistory } from "react-router-dom";
+
 import api from "../../services/api";
 
 export default (props) => {
@@ -8,6 +10,8 @@ export default (props) => {
   const [description, setDescription] = useState("");
   const [img, setImg] = useState("");
   const [value, setValue] = useState(0);
+
+  const history = useHistory();
 
   async function handleRegisterProduct(e) {
     e.preventDefault();
@@ -20,9 +24,9 @@ export default (props) => {
     formData.append("value", value);
     formData.append("productImage", img);
 
-    const res = await api.post("/api/product/create", formData);
+    await api.post("/api/product/create", formData);
 
-    console.log(res);
+    history.push("/");
   }
 
   return (
@@ -88,6 +92,12 @@ export default (props) => {
         <div className="row">
           <div className="col s3">
             <button onClick={handleRegisterProduct}>Adicionar produto</button>
+          </div>
+
+          <div className="col s3">
+            <Link to="/">
+              <button>voltar</button>
+            </Link>
           </div>
         </div>
       </div>

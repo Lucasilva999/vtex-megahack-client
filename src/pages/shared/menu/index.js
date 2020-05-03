@@ -5,6 +5,7 @@ import Home from "../../Home";
 import Product from "../../Product";
 
 import logoVtex from "../../../assets/VTEX_Logo.png";
+import userLogo from "../../../assets/user.png";
 
 export default () => {
   const [home, setHome] = useState("active");
@@ -45,14 +46,8 @@ export default () => {
 
   return (
     <div>
-      <nav className="menu_lateral">
-        <div className="logo menu-bar" style={{ marginLeft: "70px" }}>
+      <div className="menu_lateral">
           <img src={logoVtex} alt="Vtex Logo" width={200} />
-          <div className="logout" onClick={() => logout()}>
-            <span>logout</span>
-          </div>
-        </div>
-
         <div className="navigation" style={{ marginTop: "60px" }}>
           <div className={`home ${home}`} onClick={() => alterActive("home")}>
             Home
@@ -69,9 +64,13 @@ export default () => {
           >
             Logistica
           </div>
+          <div className="user logout" onClick={() => logout()}>
+            <img src={userLogo} alt="User"/>
+            <span>Logout</span>
+          </div>
         </div>
-      </nav>
-      <div>{component}</div>
+      </div>
+      <div className="container">{component}</div>
     </div>
   );
 };

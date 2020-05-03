@@ -259,42 +259,122 @@ form.validate-error {
   }
 }
 
-// SHARED - MENU
-.menu_lateral {
-  height: 100%;
-  color: black;
-  background-color: #fff;
-}
-.navigation {
-  div {
-    margin-top: 40px;
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 225px;
-    height: 73px;
-    cursor: pointer;
-    transition: 0.2s;
+  // SHARED - MENU
+  .menu_lateral{
+		height: 100%;
+		color: black;
+    background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    box-shadow: 2px 2px 2px 2px #FAACA8;
+    position: fixed;
+    padding-right: 15px;
+    img{
+      margin-left: 22px;
+    }
+    .user{
+      img{
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 10px;
+      }
+      p{
+        padding-top: 15px;
+      }
+    }
+    .navigation{
+      div{
+        margin-top: 40px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 225px;
+        height: 73px;
+        cursor: pointer;
+      }
+        .active {
+        color: #fff;
+        background: linear-gradient(90deg, rgba(247,25,99,0.7570378493194152) 0%, rgba(247,25,99,0.9223039557619923) 50%, rgba(247,25,99,1) 100%);
+        border-radius: 149px;
+        }
+    }
+      .logout {
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        text-decoration: underline;
+      } 
   }
-  .active {
-    color: #fff;
-    background-color: #f71963;
-    border-radius: 149px;
+  .home{
+    margin-left: 150px;
+    h1{
+      background: linear-gradient(90deg, rgba(247,25,99,0.7570378493194152) 0%, rgba(247,25,99,0.9223039557619923) 50%, rgba(247,25,99,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+      padding-top: 20px;
+    }
+    .charts{
+      text-align: center;
+    }
+    .compra_feita{
+      text-align: center;
+      display: flex;
+      margin-left: 50px;
+      .compra{
+        width: 33%;
+        .box{
+          background-color: rgb(216,216,216);
+          width: 95%;
+          padding: 20px;
+          border-radius: 10px;
+        }
+        img{
+          width: 150px;
+          height: 150px;
+        }
+        p{
+          font-size: 16px;
+          a{
+            font-weight: bold;
+            color: #f71963;
+          }
+        }
+        span{
+          font-size: 12px;
+        }
+      }
+    } 
+    .produtos_cadastrados{
+      margin-top: 100px;
+      @include max-mobile{
+        margin-top: 0;
+      }
+    }
+    .produtos_cadastrados_2{
+      margin-top: 10px;
+    }
+    .produtos_cadastrados_3{
+      margin-top: 20px;
+      .ver_mais{
+        color: #fff;
+        background: linear-gradient(90deg, rgba(247,25,99,0.7570378493194152) 0%, rgba(247,25,99,0.9223039557619923) 50%, rgba(247,25,99,1) 100%);
+        border-radius: 149px;
+        margin-bottom: 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-left: 40%;
+        cursor: pointer;
+      }
+    }
   }
-}
-.logout {
-  cursor: pointer;
-}
-.menu-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 60px;
-}
-.charts {
-  text-align: center;
-}
 
 //MARKETPLACE
 

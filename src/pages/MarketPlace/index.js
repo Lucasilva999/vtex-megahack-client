@@ -5,12 +5,17 @@ import Lupa from "../../assets/lupa.svg";
 import Location from "../../assets/location.svg";
 import Relogio from "../../assets/relogio.png";
 import Cart from "../../assets/cart.svg";
+import Avatar from "../../assets/avatar.svg";
 
 export default function MarketPlace() {
   return (
     <div>
-      <div className="top-bar-menu">
-        <img src={Cart} alt="Cart Buy" />
+      <div className="top-bar-cart">
+        <img src={Cart} width={27} alt="Cart Buy" />
+        <div>0</div>
+      </div>
+      <div className="top-bar-avatar">
+        <img src={Avatar} width={27} alt="Cart Buy" />
       </div>
       <div>
         <img src={LogoVtex} width={200} alt="" />
@@ -31,38 +36,120 @@ export default function MarketPlace() {
           </span>
           <div className="block">
             <img src={Relogio} width={140} alt="" />
-            <div>TESTE</div>
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
           </div>
           <div className="block">
             <img src={Relogio} width={140} alt="" />
-            <div>TESTE</div>
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
           </div>
           <div className="block">
             <img src={Relogio} width={140} alt="" />
-            <div>TESTE</div>
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
           </div>
           <div className="block">
             <img src={Relogio} width={140} alt="" />
-            <div>TESTE</div>
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
           </div>
           <div className="block">
             <img src={Relogio} width={140} alt="" />
-            <div>TESTE</div>
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
           </div>
           <div className="block">
             <img src={Relogio} width={140} alt="" />
-            <div>TESTE</div>
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
       <div className="topBar">
         <div className="navBar">
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
+          <span>
+            <img src={Location} width={18} alt="" />
+            <label>Pronto Entrega!</label>
+          </span>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button>Comprar</button>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
       <footer className="page-footer footer-background">

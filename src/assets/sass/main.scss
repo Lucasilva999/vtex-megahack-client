@@ -370,19 +370,66 @@ form.validate-error {
     margin-top: 10px;
     margin-bottom: 20px;
   }
-  label {
-    margin-left: 12px;
-  }
   div {
     background-color: #dbdbdb8e;
     height: 45px;
+    span {
+      margin-left: 6px;
+      label {
+        color: #000000ad;
+        font-weight: 500;
+        font-size: 17px;
+      }
+      button {
+        margin-left: 9px;
+        background-color: #142032c7;
+        color: #fff;
+        font-size: 12px;
+        padding: 6px;
+        cursor: pointer;
+      }
+    }
   }
 }
 
-.top-bar-menu {
+.top-bar-cart {
   position: absolute;
-  left: 1250px;
-  top: 80px;
+  left: 1350px;
+  top: 79px;
+  div {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    padding: 0 3px;
+    min-width: 8px;
+    height: 14px;
+    line-height: 14px;
+    background-color: #ec0e0e;
+    border-radius: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+  }
+}
+
+.top-bar-avatar {
+  position: absolute;
+  left: 1300px;
+  top: 79px;
+  div {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    padding: 0 3px;
+    min-width: 8px;
+    height: 14px;
+    line-height: 14px;
+    background-color: #ec0e0e;
+    border-radius: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+  }
 }
 
 .footer-background {

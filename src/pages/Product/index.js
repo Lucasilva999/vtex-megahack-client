@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import Lupa from "../../assets/lupa.svg";
 import Relogio from "../../assets/relogio.png";
 
@@ -12,7 +14,10 @@ export default (props) => {
           <img src={Lupa} width={20} />
         </span>
         <span>
-          <input placeholder="Oque procura?" />
+          <input placeholder="Procurar produto cadastrado" />
+          <Link to="/register-product">
+            <button className="fa fa-plus">Adicionar produto</button>
+          </Link>
         </span>
       </div>
 

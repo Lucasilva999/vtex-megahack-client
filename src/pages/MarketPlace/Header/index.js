@@ -10,7 +10,7 @@ export default function Header(props) {
   return (
     <div>
       <div className="top-bar-cart">
-        <Link to="/">
+        <Link to="/loja/logistica">
           <img src={Cart} width={27} alt="Cart Buy" />
           <div>{props.cart}</div>
         </Link>

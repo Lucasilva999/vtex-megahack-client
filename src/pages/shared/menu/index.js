@@ -47,7 +47,7 @@ export default () => {
   return (
     <div>
       <div className="menu_lateral">
-          <img src={logoVtex} alt="Vtex Logo" width={200} />
+        <img src={logoVtex} alt="Vtex Logo" width={200} />
         <div className="navigation" style={{ marginTop: "60px" }}>
           <div className={`home ${home}`} onClick={() => alterActive("home")}>
             Home
@@ -65,7 +65,7 @@ export default () => {
             Logistica
           </div>
           <div className="user logout" onClick={() => logout()}>
-            <img src={userLogo} alt="User"/>
+            <img src={userLogo} alt="User" />
             <span>Logout</span>
           </div>
         </div>

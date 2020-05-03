@@ -1,20 +1,23 @@
 import React from "react";
 
-
 import LogoVtex from "../../assets/VTEX_Logo.png";
 import Lupa from "../../assets/lupa.svg";
 import Location from "../../assets/location.svg";
 import Relogio from "../../assets/relogio.png";
+import Cart from "../../assets/cart.svg";
 
 export default function MarketPlace() {
   return (
     <div>
+      <div className="top-bar-menu">
+        <img src={Cart} alt="Cart Buy" />
+      </div>
       <div>
-        <img src={LogoVtex} width={200} />
+        <img src={LogoVtex} width={200} alt="" />
       </div>
       <div className="pesquisa">
         <span>
-          <img src={Lupa} width={20} />
+          <img src={Lupa} width={20} alt="" />
         </span>
         <span>
           <input placeholder="Oque procura?" />
@@ -23,31 +26,31 @@ export default function MarketPlace() {
       <div className="topBar">
         <div className="navBar">
           <span>
-            <img src={Location} width={18} />
+            <img src={Location} width={18} alt="" />
             <label>Sua Localização</label>
           </span>
           <div className="block">
-            <img src={Relogio} width={140} />
+            <img src={Relogio} width={140} alt="" />
             <div>TESTE</div>
           </div>
           <div className="block">
-            <img src={Relogio} width={140} />
+            <img src={Relogio} width={140} alt="" />
             <div>TESTE</div>
           </div>
           <div className="block">
-            <img src={Relogio} width={140} />
+            <img src={Relogio} width={140} alt="" />
             <div>TESTE</div>
           </div>
           <div className="block">
-            <img src={Relogio} width={140} />
+            <img src={Relogio} width={140} alt="" />
             <div>TESTE</div>
           </div>
           <div className="block">
-            <img src={Relogio} width={140} />
+            <img src={Relogio} width={140} alt="" />
             <div>TESTE</div>
           </div>
           <div className="block">
-            <img src={Relogio} width={140} />
+            <img src={Relogio} width={140} alt="" />
             <div>TESTE</div>
           </div>
         </div>

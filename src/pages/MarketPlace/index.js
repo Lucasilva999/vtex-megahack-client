@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import LogoVtex from "../../assets/VTEX_Logo.png";
 import Lupa from "../../assets/lupa.svg";
@@ -6,13 +6,21 @@ import Location from "../../assets/location.svg";
 import Relogio from "../../assets/relogio.png";
 import Cart from "../../assets/cart.svg";
 import Avatar from "../../assets/avatar.svg";
+import Logistica from "../../assets/logistic.svg";
 
 export default function MarketPlace() {
+  const [cart, setCart] = useState(0);
+
+  function handleCart() {
+    const carrinho = parseInt(cart) + 1;
+    setCart(carrinho);
+  }
+
   return (
     <div>
       <div className="top-bar-cart">
         <img src={Cart} width={27} alt="Cart Buy" />
-        <div>0</div>
+        <div>{cart}</div>
       </div>
       <div className="top-bar-avatar">
         <img src={Avatar} width={27} alt="Cart Buy" />
@@ -39,7 +47,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -48,7 +56,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -57,7 +65,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -66,7 +74,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -75,7 +83,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -84,7 +92,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -93,7 +101,7 @@ export default function MarketPlace() {
       <div className="topBar">
         <div className="navBar">
           <span>
-            <img src={Location} width={18} alt="" />
+            <img src={Logistica} width={18} alt="" />
             <label>Pronto Entrega!</label>
           </span>
           <div className="block">
@@ -101,7 +109,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -110,7 +118,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -119,7 +127,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -128,7 +136,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -137,7 +145,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>
@@ -146,7 +154,7 @@ export default function MarketPlace() {
             <div>
               <span>
                 <label>R$ 989,99</label>
-                <button>Comprar</button>
+                <button onClick={handleCart}>Comprar</button>
               </span>
             </div>
           </div>

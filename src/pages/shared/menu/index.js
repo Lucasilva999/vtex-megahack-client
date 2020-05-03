@@ -1,14 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-import logoVtex from "../../../assets/vtex-logo.png";
+import Home from "../../Home";
+import Product from "../../Product";
+
+import logoVtex from "../../../assets/VTEX_Logo.png";
 
 export default () => {
   const [home, setHome] = useState("active");
   const [product, setProduct] = useState("");
   const [logistic, setLogistic] = useState("");
 
+  const [component, setComponent] = useState(<Home />);
+
   const history = useHistory();
+
+  useEffect(() => {
+    const email = localStorage.getItem("email");
+
+    if (!email) {
+      history.push("/login");
+    }
+  }, []);
 
   function alterActive(activeItem) {
     setHome("");
@@ -16,8 +29,10 @@ export default () => {
     setLogistic("");
     if (activeItem === "home") {
       setHome("active");
+      setComponent(<Home />);
     } else if (activeItem === "product") {
       setProduct("active");
+      setComponent(<Product />);
     } else {
       setLogistic("active");
     }
@@ -29,31 +44,34 @@ export default () => {
   }
 
   return (
-    <nav className="menu_lateral">
-      <div className="logo menu-bar" style={{ marginLeft: "70px" }}>
-        <img src={logoVtex} alt="" />
-        <div className="logout" onClick={() => logout()}>
-          <span>logout</span>
+    <div>
+      <nav className="menu_lateral">
+        <div className="logo menu-bar" style={{ marginLeft: "70px" }}>
+          <img src={logoVtex} alt="Vtex Logo" width={200} />
+          <div className="logout" onClick={() => logout()}>
+            <span>logout</span>
+          </div>
         </div>
-      </div>
 
-      <div className="navigation" style={{ marginTop: "60px" }}>
-        <div className={`home ${home}`} onClick={() => alterActive("home")}>
-          Home
+        <div className="navigation" style={{ marginTop: "60px" }}>
+          <div className={`home ${home}`} onClick={() => alterActive("home")}>
+            Home
+          </div>
+          <div
+            className={`product ${product}`}
+            onClick={() => alterActive("product")}
+          >
+            Produto
+          </div>
+          <div
+            className={`logistic ${logistic}`}
+            onClick={() => alterActive("logistic")}
+          >
+            Logistica
+          </div>
         </div>
-        <div
-          className={`product ${product}`}
-          onClick={() => alterActive("product")}
-        >
-          Produto
-        </div>
-        <div
-          className={`logistic ${logistic}`}
-          onClick={() => alterActive("logistic")}
-        >
-          Logistica
-        </div>
-      </div>
-    </nav>
+      </nav>
+      <div>{component}</div>
+    </div>
   );
 };

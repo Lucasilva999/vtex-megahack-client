@@ -14,17 +14,13 @@ export default function Login() {
     }
   }, []);
 
-  useEffect(() => {
-    const mail = localStorage.getItem("email");
-
-    if (mail) {
-      history.push("/");
-    }
-  }, []);
-
   function handleLogin() {
-    localStorage.setItem("email", email);
-    history.push("/");
+    setTimeout(() => {
+      if (!(email.trim() === "" || password.trim() === "")) {
+        localStorage.setItem("email", email);
+        history.push("/");
+      }
+    }, 700);
   }
 
   return (

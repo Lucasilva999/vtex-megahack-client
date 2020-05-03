@@ -1,20 +1,36 @@
-import React from "react";
-
+import React, { useState } from "react";
 
 import LogoVtex from "../../assets/VTEX_Logo.png";
 import Lupa from "../../assets/lupa.svg";
 import Location from "../../assets/location.svg";
 import Relogio from "../../assets/relogio.png";
+import Cart from "../../assets/cart.svg";
+import Avatar from "../../assets/avatar.svg";
+import Logistica from "../../assets/logistic.svg";
 
 export default function MarketPlace() {
+  const [cart, setCart] = useState(0);
+
+  function handleCart() {
+    const carrinho = parseInt(cart) + 1;
+    setCart(carrinho);
+  }
+
   return (
     <div>
+      <div className="top-bar-cart">
+        <img src={Cart} width={27} alt="Cart Buy" />
+        <div>{cart}</div>
+      </div>
+      <div className="top-bar-avatar">
+        <img src={Avatar} width={27} alt="Cart Buy" />
+      </div>
       <div>
-        <img src={LogoVtex} width={200} />
+        <img src={LogoVtex} width={200} alt="" />
       </div>
       <div className="pesquisa">
         <span>
-          <img src={Lupa} width={20} />
+          <img src={Lupa} width={20} alt="" />
         </span>
         <span>
           <input placeholder="Oque procura?" />
@@ -23,43 +39,125 @@ export default function MarketPlace() {
       <div className="topBar">
         <div className="navBar">
           <span>
-            <img src={Location} width={18} />
+            <img src={Location} width={18} alt="" />
             <label>Sua Localização</label>
           </span>
           <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
           </div>
           <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
           </div>
           <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
           </div>
           <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
           </div>
           <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
           </div>
           <div className="block">
-            <img src={Relogio} width={140} />
-            <div>TESTE</div>
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
       <div className="topBar">
         <div className="navBar">
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
-          <div className="block"></div>
+          <span>
+            <img src={Logistica} width={18} alt="" />
+            <label>Pronto Entrega!</label>
+          </span>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
+          <div className="block">
+            <img src={Relogio} width={140} alt="" />
+            <div>
+              <span>
+                <label>R$ 989,99</label>
+                <button onClick={handleCart}>Comprar</button>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
       <footer className="page-footer footer-background">

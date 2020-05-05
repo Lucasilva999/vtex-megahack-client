@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import logoVtex from "../../assets/VTEX_Logo.png";
+import voltar from "../../assets/voltar.png";
 
 import api from "../../services/api";
 
@@ -36,6 +37,11 @@ export default (props) => {
       <div className="cadastro_prod">
         <div className="container">
           <div className="form_prod">
+            <div className="voltar">
+              <Link to="/">     
+                    <img src={voltar} alt=""/>
+              </Link>
+            </div>
             <div className="row text-center">
                 <img src={logoVtex} alt="Vtex Logo" width={200} />
             </div>

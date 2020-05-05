@@ -557,8 +557,9 @@ form.validate-error {
     background-color: white;
     padding: 65px;
     border-radius: 10px;
-      label{
-
+      .voltar{
+        margin-top: -50px;
+        margin-left: -50px;
       }
       input, textarea{
         border-bottom: 2px solid #ccc!important;
@@ -601,6 +602,20 @@ form.validate-error {
         }
         padding-top: 15px;
         padding-bottom: 15px;
+        cursor: pointer;
+      }
+      .btn_login{
+        background: linear-gradient(90deg, rgba(247,25,99,0.7570378493194152) 0%, rgba(247,25,99,0.9223039557619923) 50%, rgba(247,25,99,1) 100%);
+        border-radius: 149px;
+        text-align: center;
+        a{
+          color: #fff;
+        }
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
+        cursor: pointer;
       }
 }
 

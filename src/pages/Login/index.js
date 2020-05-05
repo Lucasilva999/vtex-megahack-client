@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-
+import logoVtex from "../../assets/VTEX_Logo.png";
 export default function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
@@ -25,35 +25,48 @@ export default function Login() {
 
   return (
     <div>
-      <section className="form-section">
-        <div className="form-wrapper">
-          <form>
-            <div className="input-block">
-              <label>Email</label>
-              <input
-                type="email"
-                id="login-email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+      <div className="cadastro_prod form-section">
+        <div className="container form-wrapper">
+          <div className="form_prod">
+            <div className="row text-center">
+                <img src={logoVtex} alt="Vtex Logo" width={200} />
             </div>
-            <div className="input-block">
-              <label>Senha</label>
-              <input
-                type="password"
-                id="login-password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
+            <div className="row">
+              <div className="col">
+                <div className="input-block">
+                  <input
+                    type="email"
+                    placeholder="Seu email"
+                    id="login-email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+              </div>
             </div>
-            <button type="submit" onClick={handleLogin} className="btn-login">
-              Login
-            </button>
-          </form>
+            <div className="row">
+              <div className="col">
+                <div className="input-block">
+                  <input
+                    type="password"
+                    placeholder="Sua senha"
+                    id="login-password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col desk-1-1">
+                <div className="btn_login btn-login">
+                  <a onClick={handleLogin}>Entrar</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
-
-      <ul className="squares"></ul>
+      </div>
     </div>
   );
 }

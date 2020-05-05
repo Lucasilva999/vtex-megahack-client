@@ -36,11 +36,11 @@ export default (props) => {
           </div>
         </div>
         <div className="row">
-          <div className="add_prod">
-              <Link to="/register-product">
+        <Link to="/register-product">
+          <div className="add_prod">     
                 <a className="fa fa-plus">Adicionar produto</a>
-              </Link>
           </div>
+        </Link>
         </div>
       </div>
         {

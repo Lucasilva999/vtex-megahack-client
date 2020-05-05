@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Link, useHistory } from "react-router-dom";
 
@@ -14,7 +14,21 @@ export default (props) => {
   const [img, setImg] = useState("");
   const [value, setValue] = useState(0);
 
+  const [lat, setLat] = useState("");
+  const [long, setLong] = useState("");
+
   const history = useHistory();
+
+  useEffect(() => {
+    async function geoLocation(long, lat) {
+      return lat, long;
+    }
+
+    navigator.geolocation.getCurrentPosition(function (position) {
+      setLat(position.coords.latitude);
+      setLong(position.coords.longitude);
+    });
+  }, []);
 
   async function handleRegisterProduct(e) {
     e.preventDefault();
@@ -26,6 +40,8 @@ export default (props) => {
     formData.append("description", description);
     formData.append("value", value);
     formData.append("productImage", img);
+    formData.append("lat", lat);
+    formData.append("lon", lat);
 
     await api.post("/api/product/create", formData);
 
@@ -38,12 +54,12 @@ export default (props) => {
         <div className="container">
           <div className="form_prod">
             <div className="voltar">
-              <Link to="/">     
-                    <img src={voltar} alt=""/>
+              <Link to="/">
+                <img src={voltar} alt="" />
               </Link>
             </div>
             <div className="row text-center">
-                <img src={logoVtex} alt="Vtex Logo" width={200} />
+              <img src={logoVtex} alt="Vtex Logo" width={200} />
             </div>
             <div className="row">
               <div className="col desk-1-2">
@@ -62,7 +78,6 @@ export default (props) => {
                   onChange={(e) => setCategory(e.target.value)}
                 />
               </div>
-
             </div>
 
             <div className="row">
@@ -75,17 +90,17 @@ export default (props) => {
                 ></textarea>
               </div>
             </div>
-            
+
             <div className="row">
               <div className="col desk-1-1 text-center">
                 <label className="label_img">
                   Imagem do produto
                   <input
-                  className="input_img"
-                  type="file"
-                  placeholder="Imagem"
-                  onChange={(e) => setImg(e.target.files[0])}
-                />
+                    className="input_img"
+                    type="file"
+                    placeholder="Imagem"
+                    onChange={(e) => setImg(e.target.files[0])}
+                  />
                 </label>
               </div>
             </div>

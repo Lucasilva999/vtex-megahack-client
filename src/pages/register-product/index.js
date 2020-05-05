@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { Link, useHistory } from "react-router-dom";
 
+import logoVtex from "../../assets/VTEX_Logo.png";
+
 import api from "../../services/api";
 
 export default (props) => {
@@ -31,73 +33,74 @@ export default (props) => {
 
   return (
     <div>
-      <div className="row">
-        <div className="col s3">
-          <span>Nome do produto</span>
-          <input
-            type="text"
-            placeholder="Nome do produto"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
+      <div className="cadastro_prod">
+        <div className="container">
+          <div className="form_prod">
+            <div className="row text-center">
+                <img src={logoVtex} alt="Vtex Logo" width={200} />
+            </div>
+            <div className="row">
+              <div className="col desk-1-2">
+                <input
+                  type="text"
+                  placeholder="Nome do produto"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="col desk-1-2">
+                <input
+                  type="text"
+                  placeholder="Categoria"
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                />
+              </div>
 
-        <div className="row">
-          <div className="col s3">
-            <span>Categoria do produto</span>
-            <input
-              type="text"
-              placeholder="Categoria"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            />
-          </div>
-        </div>
+            </div>
 
-        <div className="row">
-          <div className="col s3">
-            <span>Descrição do produto</span>
-            <textarea
-              type="text"
-              placeholder="Descrição"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            ></textarea>
-          </div>
-        </div>
+            <div className="row">
+              <div className="col desk-1-1">
+                <textarea
+                  type="text"
+                  placeholder="Descreva um pouco o seu produto para os compradores"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                ></textarea>
+              </div>
+            </div>
+            
+            <div className="row">
+              <div className="col desk-1-1 text-center">
+                <label className="label_img">
+                  Imagem do produto
+                  <input
+                  className="input_img"
+                  type="file"
+                  placeholder="Imagem"
+                  onChange={(e) => setImg(e.target.files[0])}
+                />
+                </label>
+              </div>
+            </div>
 
-        <div className="row">
-          <div className="col s3">
-            <span>Imagem do produto</span>
-            <input
-              type="file"
-              placeholder="Imagem"
-              onChange={(e) => setImg(e.target.files[0])}
-            />
-          </div>
-        </div>
+            <div className="row">
+              <div className="col desk-1-1">
+                <input
+                  type="text"
+                  placeholder="Valor do produto"
+                  onChange={(e) => setValue(+e.target.value)}
+                />
+              </div>
+            </div>
 
-        <div className="row">
-          <div className="col s3">
-            <span>Valor do produto</span>
-            <input
-              type="text"
-              placeholder="Valor"
-              value={value}
-              onChange={(e) => setValue(+e.target.value)}
-            />
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col s3">
-            <button onClick={handleRegisterProduct}>Adicionar produto</button>
-          </div>
-
-          <div className="col s3">
-            <Link to="/">
-              <button>voltar</button>
-            </Link>
+            <div className="row">
+              <div className="col desk-1-1">
+                <div className="btn_form">
+                  <a onClick={handleRegisterProduct}>Adicionar produto</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

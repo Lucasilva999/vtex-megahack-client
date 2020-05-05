@@ -320,15 +320,31 @@ form.validate-error {
       margin: 0;
       padding-top: 20px;
     }
+    .title_prod{
+      background: linear-gradient(90deg, rgba(247,25,99,0.7570378493194152) 0%, rgba(247,25,99,0.9223039557619923) 50%, rgba(247,25,99,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+      padding-top: 20px;
+    }
+    .pesquisa{
+      left: 38%;
+      top: 15%;
+      position: unset;
+    }
     .charts{
       text-align: center;
     }
     .compra_feita{
       text-align: center;
       display: flex;
+      flex-wrap: wrap;
       margin-left: 50px;
       .compra{
         width: 33%;
+        padding-top: 15px;
         .box{
           background-color: rgb(216,216,216);
           width: 95%;
@@ -351,6 +367,16 @@ form.validate-error {
         }
       }
     } 
+    .add_prod{
+      background: linear-gradient(90deg, rgba(247,25,99,0.7570378493194152) 0%, rgba(247,25,99,0.9223039557619923) 50%, rgba(247,25,99,1) 100%);
+      border-radius: 149px;
+      text-align: center;
+      a{
+        color: #fff;
+      }
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
     .produtos_cadastrados{
       margin-top: 100px;
       @include max-mobile{
@@ -516,6 +542,64 @@ form.validate-error {
     color: #fff;
     font-size: 12px;
   }
+}
+.cadastro_prod{
+  background-image: url('../bg-01.jpg')!important;
+  height: 100vh;
+}
+.form_prod{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 65px;
+    border-radius: 10px;
+      label{
+
+      }
+      input, textarea{
+        border-bottom: 2px solid #ccc!important;
+        padding: 5px!important;
+        padding-left: 10px!important;
+        padding-bottom: 2px!important;
+        border-radius: 10px!important;
+      }
+      textarea{
+        height: 8rem;
+        border: 2px solid #ccc!important;
+      }
+      input:focus {
+        outline: none!important;
+        box-shadow: none!important;
+      }
+      .label_img{
+        border: 1px solid #ccc;
+        display: inline-block;
+        padding: 6px 12px;
+        padding-bottom: 12px;
+        cursor: pointer;
+      }
+      .label_img:before{
+        content: url('../camera.png');
+        position: relative;
+        bottom: -6px;
+        padding-right: 10px;    
+      }
+      .input_img{
+        border: none!important;
+        display: none;
+      }
+      .btn_form{
+        background: linear-gradient(90deg, rgba(247,25,99,0.7570378493194152) 0%, rgba(247,25,99,0.9223039557619923) 50%, rgba(247,25,99,1) 100%);
+        border-radius: 149px;
+        text-align: center;
+        a{
+          color: #fff;
+        }
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
 }
 
 .footer-background {

@@ -546,6 +546,8 @@ form.validate-error {
 .cadastro_prod{
   background-image: url('../bg-01.jpg')!important;
   height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .form_prod{
     position: absolute;

@@ -43,12 +43,9 @@ export default (props) => {
           </div>
         </div>
       </div>
-
-      <div className="compra_feita produtos_cadastrados">
         {
-          !products.length && <span>Nenhum produto cadastrado ): </span>
+          !products.length && <div className="compra_feita produtos_cadastrados"><span>Nenhum produto cadastrado ): </span></div>
         }
-      </div>
         <div className="compra_feita produtos_cadastrados">
             {products.map((product, index) => (
               <div className="compra" key={index}>

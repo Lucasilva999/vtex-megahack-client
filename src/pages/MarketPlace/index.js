@@ -116,7 +116,7 @@ export default function MarketPlace() {
           <div className="block">
             <img src={Relogio} width={140} alt="" />
             <div>
-              <span>
+              <span>  
                 <label>R$ 989,99</label>
                 <button onClick={handleCart}>Comprar</button>
               </span>
